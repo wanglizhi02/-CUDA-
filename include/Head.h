@@ -1,0 +1,24 @@
+#pragma once
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <cuda.h>
+#include <cuda_runtime.h>
+#include <device_launch_parameters.h>
+#include <cufft.h>
+#include <math.h>
+#include "fftw3.h"
+#include <cublas_v2.h>
+#include <string.h>
+#include <errno.h>
+#include <sys/mman.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <time.h>
+#include <helper_cuda.h>
+#include "scftData.h"
+#include "scftVariable.h"
+#include <fstream>
+#include <memory>
+#include <vector>
+#define PI 3.14159265358979323846

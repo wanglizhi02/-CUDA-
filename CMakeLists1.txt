@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.18)
+project(myab LANGUAGES CXX CUDA)
+
+INCLUDE_DIRECTORIES(./include)
+
+find_package(CUDA REQUIRED)
+include_directories(${CUDA_INCLUDE_DIRS})
+
+
+find_library(SHTNS libshtns.a ./lib)
+find_library(INITIA libInitialization.so ./lib)
+
+
+ADD_EXECUTABLE(ab ./ab.cpp)
+
+
+TARGET_LINK_LIBRARIES(ab PRIVATE ${SHTNS} ${INITIA} ${CUDA_LIBRARIES})
+
